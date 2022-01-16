@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git branch: 'main', credentialsId: 'nunnasubbarao83', url: 'https://github.com/nunnasubbarao83/hello-world.git'
+        git branch: 'master', credentialsId: 'nunnasubbarao83', url: 'https://github.com/nunnasubbarao83/hello-world.git'
       }
     }
     stage('Building image') {
