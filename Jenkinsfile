@@ -1,18 +1,4 @@
 pipeline {
-  agent any
-  stages {
-        stage('Docker Build') {
-      agent any
-      steps {
-        sh 'docker build -t demo_tomcat .'
-        sh 'docker run -d -it --name demo -p 8083:8080 demo_tomcat'
-      }
-    }
-  }
-}
-
-
-pipeline {
   environment {
     registry = "22249292/first"
     registryCredential = 'dockerhub_id'
@@ -22,7 +8,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git branch: 'main', credentialsId: 'nunnasubbarao83', url: 'https://github.com/nunnasubbarao83/jenkins_pipeline.git'
+        git branch: 'main', credentialsId: 'nunnasubbarao83', url: 'https://github.com/nunnasubbarao83/hello-world.git'
       }
     }
     stage('Building image') {
