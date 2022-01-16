@@ -3,4 +3,4 @@ From tomcat
 
 # Maintainer 
 MAINTAINER "valaxytech@gmail.com" 
-COPY ./SampleWebApp.war /usr/local/tomcat/webapps
+COPY /root/SampleWebApp.war /usr/local/tomcat/webapps
